@@ -8,12 +8,13 @@ public class Account {
 
     /**
      * Метод для проверки ТОЛЬКО ОДНОГО пробела в строке на карте
-     *
+     * А так же что бы строка не начиналась и заканчивалась на пробел
      * @param name - входная строка имени на карте
      * @return true or false
      */
     public boolean checkOnlyOneSpace(String name) {
-        return name == null ? false : name.split(" ").length - 1 == 1;
+        return name == null ? false : name.split(" ").length - 1 == 1 &&
+                !(name.startsWith(" ")) && !(name.endsWith(" "));
     }
 
     /**
@@ -22,11 +23,6 @@ public class Account {
      * @return true or false
      */
     public boolean checkNameToEmboss() {
-        if (name.length() >= 3 && name.length() <= 19 && checkOnlyOneSpace(name) &&
-                !(name.startsWith(" ")) && !(name.endsWith(" "))) {
-            return true;
-        } else {
-            return false;
-        }
+        return name == null ? false : name.length() >= 3 && name.length() <= 19 && checkOnlyOneSpace(name);
     }
 }

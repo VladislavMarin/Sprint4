@@ -9,7 +9,7 @@ public class Praktikum {
      */
     public static void main(String[] args) {
 
-        final String name = " NAMENAME";
+        final String name = "NAME NAME";
 
         Account account = new Account(name);
 
