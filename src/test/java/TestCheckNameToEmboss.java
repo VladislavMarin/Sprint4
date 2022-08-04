@@ -34,6 +34,8 @@ public class TestCheckNameToEmboss {
                 {"NA", false},
                 {"NAMENAME NAMENAME45", true},
                 {"N M", true},
+                {"", false},
+                {null, false}
         };
     }
 
